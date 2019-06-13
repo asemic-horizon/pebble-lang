@@ -1,0 +1,19 @@
+start:  line+
+line: (expression?)+ (NEWLINE? | comment?)
+
+expression: atom | "(" head tail ")" 
+comment: comment_mark (atom?)+ NEWLINE
+head: atom
+tail: expression+
+
+atom: WORD+ | NUMBER+ | SYMBOL
+
+SYMBOL:  "+" | "*" | "-" | "/" | "%"
+WORD:  LETTER+
+NUMBER: INT+
+comment_mark: ";"
+%import common.LETTER
+%import common.INT
+%import common.WS_INLINE
+%import common.NEWLINE
+%ignore WS_INLINE
