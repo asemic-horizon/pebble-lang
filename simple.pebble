@@ -1,2 +1,2 @@
-(fold + 1 2 (fold * 3 4));comment
+(fold + 1 2 (fold * 3 4))
 (another symbolic expression)

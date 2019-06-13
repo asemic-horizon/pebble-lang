@@ -1,10 +1,5 @@
-start:  line+
-line: (expression?)+ (NEWLINE? | comment?)
-
-expression: atom | "(" head tail ")" 
-comment: comment_mark (atom?)+ NEWLINE
-head: atom
-tail: expression+
+start:  expression+
+expression: atom | "(" expression+ ")" 
 
 atom: WORD+ | NUMBER+ | SYMBOL
 
@@ -17,3 +12,4 @@ comment_mark: ";"
 %import common.WS_INLINE
 %import common.NEWLINE
 %ignore WS_INLINE
+%ignore NEWLINE

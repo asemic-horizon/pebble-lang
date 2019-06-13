@@ -14,9 +14,3 @@ with open(sys.argv[1]) as file: program = ''.join(file.readlines())
 tree = parser.parse(program)
 print(tree.pretty())
 
-for token in tree.find_data("expression"):
-    for subtoken in token.find_data("atom"):
-        print("head", subtoken)
-    for subtoken in token.find_data("expression"):
-        print("tail", subtoken)     
-    print("\n")
