@@ -4,15 +4,16 @@ Immediate goals:
 
 * Parse a simple s-expression syntax (Python, Lark). Example:
  ```
- (fold + 1 2 (fold * 3 4));comment
-(another symbolic expression)
-;(this expression won't run)
+ (fold + 1 2 (fold * 3 4))
 ```
+* Convert simple folds to WebAssembly Text (wast) stack functions
+* Creation of variables in wast (runtime) rather than Python ("compile-time")
+* Make a test HTML/JS environment
 
 Near-term goals:
 
 * Define a very small list-oriented language
-* Write a tree-walking compiler to WebAssembly Text (stack format)
+* Write a tree-walking compiler to WebAssembly Text
 
 
 Long-term goals:
