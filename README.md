@@ -1,5 +1,5 @@
 ## PEBBLE: Parenthetical Expressions in a Browserlike Environment
-
+(**Status: dormant. No progress expected in the near-term**)
 Immediate goals:
 
 * Parse a simple s-expression syntax (Python, Lark). Example:
